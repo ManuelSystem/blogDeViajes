@@ -1,0 +1,197 @@
+/**para implementar los media query escribi mq junto con tabulador**/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+} /*esta regla permite ajustar los contenedores sin afectar las medidas establecidas*/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+p {
+  font-size: 16px;
+  line-height: 2;
+}
+.boton {
+  background-color: #00b8e4;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  border-radius: 3px;
+}
+.boton:hover {
+  background-color: #026f8a;
+}
+.site-header {
+  padding: 20px 0;
+}
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto; /*centra el contenido del div*/
+}
+.clearfix::after {
+  /*este código limpia el float de los contenedores*/
+  display: block;
+  content: "";
+  clear: both;
+}
+/*Navegación Responsive*/
+.barra {
+  overflow: hidden; /*oculta la barra en la pantalla movil*/
+}
+.mobile-menu {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  padding: 20px 0;
+}
+#nav:target {
+  /*realiza un evento esta propiedad */
+  max-height: 800px;
+}
+.navegacion-principal {
+  max-height: 0;
+  transition: 0.5s;
+}
+@media (min-width: 768px) {
+  .navegacion-principal {
+    max-height: unset; /*ignora la propiedad dada anteriormente y permite mostrar la barra nuevamente en pantalla grande*/
+  }
+  .mobile-menu,
+  .cerrar {
+    display: none !important;
+  }
+}
+/*Estilos de navegacion*/
+.barra {
+  background-color: #db008d;
+  margin-top: 40px;
+}
+.navegacion-principal a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  display: block; /*cambia la ubicacion de los componentes, en este caso pone uno debajo del otro para que se vea bien en movil*/
+  text-align: center;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  /*cuando el minimo de la pantalla sea 768 o más pixeles, se aplica estos estilos*/
+  .navegacion-principal a {
+    display: inline-block; /*hace que tome los valores y los aplique correctamente*/
+    margin-right: 20px;
+  }
+}
+.navegacion-principal a:hover {
+  background-color: #00b8e4;
+}
+/*estilos de contenido principal*/
+.contenido-principal {
+  margin-top: 40px;
+}
+.contenido-principal,
+.sidebar {
+  padding: 25px;
+}
+@media (min-width: 768px) {
+  .contenido-principal {
+    width: 70%;
+    float: left;
+    padding-right: 40px;
+  }
+  .sidebar {
+    width: 30%;
+    float: right;
+    padding: 0;
+    margin-top: 40px;
+  }
+}
+/*estilos de las entradas*/
+h2 {
+  color: #00b8e4;
+  margin-bottom: 20px;
+}
+.entrada {
+  margin-top: 60px;
+}
+.entrada:last-of-type {
+  margin-top: 0;
+}
+.entrada img {
+  display: block;
+}
+@media (min-width: 480px) {
+  .entrada img {
+    width: 300px;
+    float: left;
+    margin: 0 30px 30px 0;
+  }
+}
+.entrada p {
+  text-align: justify;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px 10px 10px 0;
+}
+.sidebar ul li:hover {
+  background-color: #00b8e4;
+}
+.sidebar ul li a {
+  color: #00b8e4;
+  font-size: 18px;
+  text-decoration: none;
+}
+.sidebar ul li:hover a {
+  color: #ffffff;
+}
+.footer-sitio {
+  background-color: #db008d;
+  margin-top: 60px;
+  padding-top: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+.footer-sitio h2 {
+  color: #ffffff;
+}
+.footer-sitio a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 22px;
+  margin-right: 20px;
+}
+.footer-sitio a:last-of-type {
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .footer-sitio .nosotros {
+    float: left;
+    width: 30%;
+    text-align: left;
+  }
+  .footer-sitio .menu {
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+}
+.copyright {
+  background-color: #a5026c;
+  margin: 50px 0 0 0;
+  padding: 22px 0;
+}
