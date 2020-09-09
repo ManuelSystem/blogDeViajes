@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog de Viajes</title>
+    <script
+      src="https://kit.fontawesome.com/7cf8123703.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
@@ -12,12 +16,18 @@
       <img src="img/logo.png" alt="logo de pagina" />
     </header>
     <div class="barra">
-      <nav class="navegacion-principal contenedor">
+      <a href="#nav" class="mobile-menu">
+        <i class="fas fa-ellipsis-v"></i>
+      </a>
+      <nav id="nav" class="navegacion-principal contenedor">
         <a href="#">Inicio</a>
         <a href="#">Nosotros</a>
         <a href="#">Blog</a>
         <a href="#">Tienda</a>
         <a href="#">Contacto</a>
+        <a href="#" class="cerrar">
+          <i class="fas fa-window-close"></i>
+        </a>
       </nav>
     </div>
     <div class="contenedor clearfix">
@@ -87,5 +97,31 @@
         </section>
       </aside>
     </div>
+    <footer class="footer-sitio">
+      <div class="contenedor clearfix">
+        <section class="nosotros">
+          <h2>Sobre Nosotros</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+            mollitia unde. A adipisci labore hic rerum fuga sequi nulla, amet
+            explicabo! Officiis atque ipsam impedit dolores at ad vero
+            reprehenderit.
+          </p>
+        </section>
+        <section class="menu">
+          <h2>Menú de Navegación</h2>
+          <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Blog</a>
+            <a href="#">Tienda</a>
+            <a href="#">Contacto</a>
+          </nav>
+        </section>
+      </div>
+      <p class="copyright">
+        Web de Viajes - Todos los derechos Reservados &copy;2020
+      </p>
+    </footer>
   </body>
 </html>
